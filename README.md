@@ -27,13 +27,23 @@ You can sample from them by first converting them into an *RVar* from
 > sample (rvar (mixture 1 3))
 ```
 
-Sample more using standard monadic combinators like 'replicateM':
+Sample many times from models using standard monadic combinators like
+'replicateM':
 
 ```
 > replicateM 1000 (sample (rvar (mixture 1 3)))
 ```
 
 ![](assets/mixture.png)
+
+Or convert them to measures using a built-in interpreter:
+
+```
+> let nu = measure (mixture 1 3)
+> let f = cdf nu
+```
+
+![](assets/mixture_cdf.png)
 
 You can perform inference on models using rejection or importance sampling, or
 use a simple, stateful Metropolis backend.  Here's a simple beta-bernoulli model
@@ -80,5 +90,23 @@ weighted average for weighted samples returned via importance sampling:
 0.6369246537796793
 ```
 
+## Background
+
+You can read about some of the theory and ideas behind this kind of language in
+some blog posts I've written.
+
+* [Encoding Statistical Independence, Statically][enco]
+* [A Simple Embedded Probabilistic Programming Language][sppl]
+* [Comonadic MCMC][como]
+* [Foundations of the Giry Monad][gifo]
+* [Implementing the Giry Monad][gimp]
+* [The Applicative Structure of the Giry Monad][giap]
+
+[giap]: /giry-monad-applicative
+[gimp]: /giry-monad-implementation
+[gifo]: /giry-monad-foundations
+[enco]: /encoding-independence-statically
+[sppl]: /simple-probabilistic-programming
+[como]: /comonadic-mcmc
 [rafu]: https://hackage.haskell.org/package/random-fu
 
