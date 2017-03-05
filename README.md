@@ -102,11 +102,11 @@ some blog posts I've written.
 * [Implementing the Giry Monad][gimp]
 * [The Applicative Structure of the Giry Monad][giap]
 
-[giap]: /giry-monad-applicative
-[gimp]: /giry-monad-implementation
-[gifo]: /giry-monad-foundations
-[enco]: /encoding-independence-statically
-[sppl]: /simple-probabilistic-programming
-[como]: /comonadic-mcmc
+[giap]: https://jtobin.io/giry-monad-applicative
+[gimp]: https://jtobin.io/giry-monad-implementation
+[gifo]: https://jtobin.io/giry-monad-foundations
+[enco]: https://jtobin.io/encoding-independence-statically
+[sppl]: https://jtobin.io/simple-probabilistic-programming
+[como]: https://jtobin.io/comonadic-mcmc
 [rafu]: https://hackage.haskell.org/package/random-fu
 
