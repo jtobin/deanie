@@ -27,11 +27,13 @@ library
     , Deanie.Inference.Metropolis
     , Deanie.Inference.Rejection
     , Deanie.Language
+    , Deanie.Measure
     , Deanie.RVar
   build-depends:
       base
     , foldl
     , free
+    , integration
     , math-functions
     , monad-loops
     , random-fu
