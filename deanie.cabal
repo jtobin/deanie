@@ -1,0 +1,91 @@
+name:                deanie
+version:             0.1.0
+synopsis:            An embedded probabilistic programming language.
+license:             MIT
+license-file:        LICENSE
+author:              Jared Tobin
+maintainer:          jared@jtobin.io
+build-type:          Simple
+cabal-version:       >=1.10
+description:
+  An embedded probabilistic programming language.
+
+library
+  default-language:    Haskell2010
+  hs-source-dirs:      lib
+  default-extensions:
+      LambdaCase
+    , RecordWildCards
+  other-modules:
+      Control.Applicative.Extended
+  exposed-modules:
+      Deanie
+    , Deanie.Density
+    , Deanie.Expr
+    , Deanie.Inference
+    , Deanie.Inference.Importance
+    , Deanie.Inference.Metropolis
+    , Deanie.Inference.Rejection
+    , Deanie.Language
+    , Deanie.RVar
+  build-depends:
+      base
+    , foldl
+    , free
+    , math-functions
+    , monad-loops
+    , random-fu
+    , recursion-schemes
+
+Test-suite betabernoulli-rejection
+  type:              exitcode-stdio-1.0
+  hs-source-dirs:    test
+  Main-is:           BetaBernoulliRejection.hs
+  default-language:  Haskell2010
+  ghc-options:
+    -O2 -Wall
+  other-modules:
+      Model.BetaBernoulli
+  build-depends:
+      base
+    , deanie
+
+Test-suite betabernoulli-importance
+  type:              exitcode-stdio-1.0
+  hs-source-dirs:    test
+  Main-is:           BetaBernoulliImportance.hs
+  default-language:  Haskell2010
+  ghc-options:
+    -O2 -Wall
+  other-modules:
+      Model.BetaBernoulli
+  build-depends:
+      base
+    , deanie
+
+Test-suite betabernoulli-metropolis
+  type:              exitcode-stdio-1.0
+  hs-source-dirs:    test
+  Main-is:           BetaBernoulliMetropolis.hs
+  default-language:  Haskell2010
+  ghc-options:
+    -O2 -Wall
+  other-modules:
+      Model.BetaBernoulli
+  build-depends:
+      base
+    , deanie
+
+Test-suite mixture-importance
+  type:              exitcode-stdio-1.0
+  hs-source-dirs:    test
+  Main-is:           MixtureImportance.hs
+  default-language:  Haskell2010
+  ghc-options:
+    -O2 -Wall
+  other-modules:
+      Model.Mixture
+  build-depends:
+      base
+    , deanie
+
