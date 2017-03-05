@@ -1,6 +1,8 @@
 
 # deanie
 
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jtobin/deanie/blob/master/LICENSE)
+
 *deanie* is an embedded probabilistic programming language.  It can be used to
 denote, sample from, and perform inference on probabilistic programs.
 
