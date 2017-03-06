@@ -46,8 +46,8 @@ Or convert them to measures using a built-in interpreter:
 ![](assets/mixture_cdf.png)
 
 You can perform inference on models using rejection or importance sampling, or
-use a simple, stateful Metropolis backend.  Here's a simple beta-bernoulli model
-conditioned on the provided observations:
+use a simple, stateful Metropolis backend.  Here's a simple beta-bernoulli
+model, plus some observations to condition on:
 
 ``` haskell
 betaBernoulli :: Double -> Double -> Program Bool
